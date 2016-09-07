@@ -352,7 +352,6 @@ function callSendAPI(messageData) {
       var recipientId = body.recipient_id;
       var messageId = body.message_id;
 
-      messageId, recipientId);
     } else {
       console.error("Unable to send message.");
       console.error(response);
