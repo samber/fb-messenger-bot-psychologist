@@ -16,7 +16,7 @@
 
 (defun process_msg (str)
   (setq doctor-sent str)
-  (setq doctor-sent (mapcar 'intern (delete "" (split-string str split-string-default-separators))))
+  (setq doctor-sent (mapcar 'intern (delete "" (split-string (downcase str) split-string-default-separators))))
   (doctor-doc)
   (princ (buffer-string))
   (erase-buffer)
