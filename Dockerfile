@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 CMD npm start
 
 RUN apt-get update \
-    && apt-get install -y emacs \
+    && apt-get install -y emacs24-nox \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
