@@ -262,7 +262,7 @@ function receivedMessage(event) {
 }
 
 setInterval(function () {
-    if (emacsInstances.length > 1000 || emacsInstances[0].lastMessageOn < new Date().getTime() - 1000 * 60 * 60)
+    if (emacsInstances.length > 1000 || (emacsInstances.length && emacsInstances[0].lastMessageOn.getTime() < new Date().getTime() - 1000 * 60 * 60))
 	close(emacsInstance[0]);
 }, 1000);
 
