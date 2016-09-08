@@ -1,4 +1,4 @@
-# Messenger Bot replying with current date/time
+# Messenger Bot talking as a "psychologist"
 
 ## Setup
 
@@ -8,9 +8,10 @@ Replace values for `APP_ID` and `PAGE_ID` in `public/index.html`.
 
 ## Run
 
-You can start the server by running `npm start`. However, the webhook must be at a public URL that the Facebook servers can reach. Therefore, running the server locally on your machine will not work.
-
-You can run this example on a cloud service provider like Heroku, Google Cloud Platform or AWS. Note that webhooks must have a valid SSL certificate, signed by a certificate authority. Read more about setting up SSL for a [Webhook](https://developers.facebook.com/docs/graph-api/webhooks#setup).
+```
+docker build -t samber/doctor .
+docker run --rm -i -p 8080:8080 samber/doctor
+```
 
 ## Webhook
 

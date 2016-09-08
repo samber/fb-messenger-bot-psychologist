@@ -2,10 +2,6 @@
 (load-file "doctor.el")
 
 
-(defun _doctor-readin ()
-  "Read a sentence.  Return it as a list of words."
-    argv)
-
 ; override
 (defun doctor-txtype (ans)
   "Output to buffer a list of symbols or strings as a sentence."
@@ -22,9 +18,10 @@
   (erase-buffer)
   )
 
-; init doctor module
+; init doctor answers
 (make-doctor-variables)
 
+; main loop
 (while (setq line (read-from-minibuffer ""))
   (process_msg line)
   )
