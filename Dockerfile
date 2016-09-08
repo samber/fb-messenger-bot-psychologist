@@ -10,4 +10,6 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 ADD . /usr/src/app
+ADD https://raw.githubusercontent.com/jwiegley/emacs-release/master/lisp/play/doctor.el /usr/src/app
+
 RUN npm install
